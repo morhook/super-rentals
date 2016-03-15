@@ -11,14 +11,20 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{rental-listing}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Owner: \nType: \nLocation: \nBedrooms: \n  Show image');
 
-  // Template block usage:
+  // Rental full from Veruca Salt
+  this.set('rental', {title:'Grand Old Mansion', owner:'Veruca Salt', type:'Estate', 
+    city: 'San Francisco', bedrooms: 15});
   this.render(hbs`
-    {{#rental-listing}}
-      template block text
+    {{#rental-listing rental=rental}}
     {{/rental-listing}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), `Grand Old Mansion
+Owner: Veruca Salt
+Type: Estate
+Location: San Francisco
+Bedrooms: 15
+  Show image`);
 });
