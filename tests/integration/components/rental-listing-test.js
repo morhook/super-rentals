@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{rental-listing}}`);
 
-  assert.equal(this.$().text().trim(), 'Owner: \nType: \nLocation: \nBedrooms: \n  Show image');
+  assert.equal(this.$().text().trim(), 'Owner: \nType: Standalone - \nLocation: \nBedrooms: \n  Show image');
 
   // Rental full from Veruca Salt
   this.set('rental', {title:'Grand Old Mansion', owner:'Veruca Salt', type:'Estate', 
@@ -23,7 +23,7 @@ test('it renders', function(assert) {
 
   assert.equal(this.$().text().trim(), `Grand Old Mansion
 Owner: Veruca Salt
-Type: Estate
+Type: Standalone - Estate
 Location: San Francisco
 Bedrooms: 15
   Show image`);
