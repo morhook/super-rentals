@@ -1,0 +1,1139 @@
+{
+    "title": "Install Guide",
+    "shared": {
+        "TextButton": {
+            "type": "link",
+            "css": "btn btn-text"
+        },
+
+        "NextButton": {
+            "type": "link",
+            "css": "btn btn-next",
+            "content": "NEXT"
+        },
+
+        "YesButton": {
+            "type": "TextButton",
+            "content": "YES"
+        },
+
+        "NoButton": {
+            "type": "TextButton",
+            "content": "NO"
+        },
+
+        "ListButton": {
+            "type": "link",
+            "css": "btn btn-list"
+        },
+
+        "Header2": {
+            "type": "header",
+            "size": 2
+        },
+
+        "PanelCompatibilityTitle": {
+            "type": "Header2",
+            "content": "Verify Panel Compatibility"
+        },
+
+        "KeypadAddressTitle": {
+            "type": "Header2",
+            "content": "Enable Keypad Address"
+        },
+
+        "SemWiringTitle": {
+            "type": "Header2",
+            "content": "Wire the SEM"
+        },
+
+        "SemWiringText": {
+            "type": "text",
+            "content": "Wire the SEM using the diagram below."
+        },
+
+        "SemWiringImage": {
+            "type": "image",
+            "src": "sem-wizard/assets/images/sem-wiring.jpg"
+        },
+
+        "KeypadScrolling": {
+            "type": "TextButton",
+            "content": "The keypad is scrolling through the zones.",
+            "link": "panelWaiting"
+        },
+
+        "KeypadNotScrolling": {
+            "type": "TextButton",
+            "content": "The keypad is <strong>not</strong> scrolling through the zones."
+        },
+
+        "ChangeSettingsTitle": {
+            "type": "Header2",
+            "content": "Change Panel Settings"
+        },
+
+        "SettingsSilentAlarm": {
+            "type": "text",
+            "content": "For the SEM to report silent alarms or duress codes, please verify the following setting."
+        },
+
+        "Settings1111": {
+            "type": "text",
+            "content": "Alarm.com recommends 1111. However, if the panel already has a number programmed in, you can leave it as is."
+        },
+
+        "DeleteUserCodesTitle": {
+            "type": "Header2",
+            "content": "Delete All User Codes"
+        },
+
+        "TuxedoTitle": {
+            "type": "Header2",
+            "content": "Tuxedo Touch"
+        },
+
+        "TechSupport": {
+            "css": "tech-support",
+            "content": {
+                "type": "children",
+                "items": [
+                    {
+                        "type": "text",
+                        "content": "Alarm.com Technical Support"
+                    },
+                    {
+                        "type": "text",
+                        "content": "866-834-0470"
+                    }
+                ]
+            }
+        }
+    },
+    "pages": [
+        {
+            "alias": "start",
+            "css": "start",
+            "items": [
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/adc-logo.svg",
+                    "alt": "Alarm.com"
+                },
+                {
+                    "type": "header",
+                    "size": 1,
+                    "content": "SYSTEM ENHANCEMENT MODULE: <span>Honeywell 2/ADEMCO VISTA</span>"
+                },
+                {
+                    "type": "text",
+                    "content": "INSTALLATION WIZARD"
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/sem-front.jpg"
+                },
+                {
+                    "type": "NextButton"
+                }
+            ]
+        },
+
+        {
+            "guide": "Page 2",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Equipment"
+                },
+                {
+                    "type": "text",
+                    "content": "Please locate the following equipment:"
+                },
+                {
+                    "type": "list",
+                    "content": [
+                        "System Enhancement Module",
+                        "Wire and Fuse",
+                        "Screws and Wall Anchors",
+                        "Small blade screwdriver and Phillips screwdriver",
+                        "22/4 bus wire",
+                        "22/4 ring/tip wire",
+                        "Alpha keypad (recommended for install)"
+                    ]
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 1",
+            "items": [
+                {
+                    "type": "PanelCompatibilityTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "My panel is a ..."
+                },
+                {
+                    "css": "panel-compatibility",
+                    "content": {
+                        "type": "children",
+                        "items": [
+                            {
+                                "type": "ListButton",
+                                "content": {
+                                    "type": "children",
+                                    "items": [
+                                        {
+                                            "type": "text",
+                                            "content": "VISTA-10P"
+                                        },
+                                        {
+                                            "type": "list",
+                                            "content": [
+                                                "VISTA-10PSIA",
+                                                "First Alert FA130CP",
+                                                "First Alert FA130CPSIA"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "ListButton",
+                                "content": {
+                                    "type": "children",
+                                    "items": [
+                                        {
+                                            "type": "text",
+                                            "content": "VISTA-15P"
+                                        },
+                                        {
+                                            "type": "list",
+                                            "content": [
+                                                "VISTA-15PSIA",
+                                                "First Alert FA148CP",
+                                                "First Alert FA148CPSIA"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "ListButton",
+                                "content": {
+                                    "type": "children",
+                                    "items": [
+                                        {
+                                            "type": "text",
+                                            "content": "VISTA-20P"
+                                        },
+                                        {
+                                            "type": "list",
+                                            "content": [
+                                                "VISTA-20PSIA",
+                                                "First Alert FA168CP",
+                                                "First Alert FA168CPSIA"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "TextButton",
+                                "content": "other equivalent panel"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 1",
+            "items": [
+                {
+                    "type": "PanelCompatibilityTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "The SEM is compatible with VISTA 10P, 15P, and 20P panels dating back to <strong>2005</strong>."
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/panel-age.png"
+                },
+                {
+                    "type": "link",
+                    "css": "btn btn-single",
+                    "content": "My panel is 2005 or newer."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 2",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Verify Installer Code"
+                },
+                {
+                    "type": "text",
+                    "content": "The Installer Code should be entered during account creation. Please verify this code works at the panel."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The Installer Code entered during account creation is <strong>correct</strong>."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The Installer Code entered during account creation is <strong>incorrect</strong>, but I will fix it later."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 3",
+            "items": [
+                {
+                    "type": "KeypadAddressTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "Keypad 8 Device Address 23 needs to be enabled for the SEM to communicate with the panel. To do this, go into panel programming and select <strong>*196 + [1] + 99</strong>."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "I enabled Address 23 in *196 panel programming.",
+                    "link": "disconnectPower"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "Address 23 is already used by another device."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 3",
+            "items": [
+                {
+                    "type": "KeypadAddressTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "If Address 23 is already used be another device, identify an available keypad address and the DIP switches on the SEM."
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/keypad-address.png"
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 3",
+            "items": [
+                {
+                    "type": "KeypadAddressTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "Change the DIP switches on the SEM to match the corresponding keypad address."
+                },
+                {
+                    "type": "table",
+                    "css": "tbl-keypad-address",
+                    "content": {
+                        "headers": [
+                            "Keypad Address",
+                            "DIP Switch Setting",
+                            "VISTA Programming Menu"
+                        ],
+                        "rows": [
+                            [
+                                17,
+                                "None -all OFF",
+                                "*190"
+                            ],
+                            [
+                                18,
+                                "Switch 4 ON, others OFF",
+                                "*191"
+                            ],
+                            [
+                                19,
+                                "Switch 3 ON, others OFF",
+                                "*192"
+                            ],
+                            [
+                                20,
+                                "Switch 3 and 4 ON, others OFF",
+                                "*193"
+                            ],
+                            [
+                                21,
+                                "Switch 2 ON, others OFF",
+                                "*194"
+                            ],
+                            [
+                                22,
+                                "Switch 2 and 4 ON, others OFF",
+                                "*195"
+                            ],
+                            [
+                                23,
+                                "Switch 2 and 3 ON, others OFF",
+                                "*196"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Enable the address using the corresponding VISTA programming menu."
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "alias": "disconnectPower",
+            "guide": "Step 4",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Disconnect Power"
+                },
+                {
+                    "type": "text",
+                    "content": "Verify that the panel is DISARMED, remove AC power, and disconnect the battery."
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/power-off.png"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "AC power is removed and the battery is disconnected."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 5",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Mount the SEM"
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/sem-back-plate.jpg"
+                },
+                {
+                    "type": "text",
+                    "content": "Then, insert the SEM circuit board into the back plate."
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 6",
+            "items": [
+                {
+                    "type": "SemWiringTitle"
+                },
+                {
+                    "type": "SemWiringText"
+                },
+                {
+                    "type": "SemWiringImage"
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 6",
+            "items": [
+                {
+                    "type": "SemWiringTitle"
+                },
+                {
+                    "type": "SemWiringText"
+                },
+                {
+                    "type": "SemWiringImage"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "YELLOW (IN) is connected to YELLOW (DATA OUT)."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 6",
+            "items": [
+                {
+                    "type": "SemWiringTitle"
+                },
+                {
+                    "type": "SemWiringText"
+                },
+                {
+                    "type": "SemWiringImage"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "RING is connected to RING, and TIP is connected to TIP."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 6",
+            "items": [
+                {
+                    "type": "SemWiringTitle"
+                },
+                {
+                    "type": "SemWiringText"
+                },
+                {
+                    "type": "SemWiringImage"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "+12V is connected to the battery."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 7",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Power Up the Panel"
+                },
+                {
+                    "type": "text",
+                    "content": "Connect the battery and restore AC power. The panel will begin scrolling through the zones."
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/panel-powered.png"
+                },
+                {
+                    "type": "KeypadScrolling"
+                },
+                {
+                    "type": "KeypadNotScrolling"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 7",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Reset the Installer Code"
+                },
+                {
+                    "type": "text",
+                    "content": "If the keypad did not begin scrolling through the zones, reset the Installer Code and power cycle the system."
+                },
+                {
+                    "type": "KeypadScrolling"
+                },
+                {
+                    "type": "KeypadNotScrolling"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Contact Technical Support"
+                },
+                {
+                    "type": "text",
+                    "content": "If you’ve reset the Installer Code, and the panel is not scrolling through the zones, please contact Alarm.com Technical Support at the number below."
+                },
+                {
+                    "type": "TechSupport"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "alias": "panelWaiting",
+            "guide": "Step 7",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Wait&hellip;"
+                },
+                {
+                    "type": "text",
+                    "content": "The panel will finish scrolling through the zones and the keypad will show the home screen."
+                },
+                {
+                    "type": "image",
+                    "src": "sem-wizard/assets/images/panel-wait.png"
+                },
+                {
+                    "type": "text",
+                    "content": "WAIT—Do not touch the panel for three minutes or until you hear a beep."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "I heard the beep."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The keypad did not beep, or I’m not sure if it beeped."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "SettingsSilentAlarm"
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*41 Primary Phone No.</em> needs to be set to a number."
+                },
+                {
+                    "type": "Settings1111"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*41 is set to a number."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "SettingsSilentAlarm"
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*43 Partition 1 Primary Acct. No.</em> needs to be set to a number."
+                },
+                {
+                    "type": "Settings1111"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*43 is set to a number."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "SettingsSilentAlarm"
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*45 Partition 2 Primary Acct. No.</em> needs to be set to a number."
+                },
+                {
+                    "type": "Settings1111"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*45 is set to a number."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "SettingsSilentAlarm"
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*48 Report Format</em> needs the primary phone number format set to <strong>seven</strong> (keypad presses [7] + [7])."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*48 is set to <strong>seven</strong>."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "SettingsSilentAlarm"
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*49 Split/Dual Reporting</em> needs to be set to zero."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*49 is set to <strong>zero</strong>."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "For the SEM to report duress codes, please verify the following setting."
+                },
+                {
+                    "type": "text",
+                    "content": "<em>*Zone 92</em> needs to be enabled by entering a reporting code for this zone."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "Zone 92 is enabled."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The customer will not have a duress code."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "Before the customer can use the bypass open sensors feature on Alarm.com, you will need to enable <em>*23 Quick (Forced) Bypass</em>."
+                },
+                {
+                    "type": "text",
+                    "content": "To enable this, set *23 to <strong>one</strong>."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*23 is set to <strong>one</strong>."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "My customer will not be bypassing sensors."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "ChangeSettingsTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "If the SEM is being installed on a panel that was previously communicating through another radio, <em>*29 IP/GSM</em> needs to be set to <strong>zero</strong>."
+                },
+                {
+                    "type": "text",
+                    "content": "This will ensure that the panel is not looking for the old radio and can communicate properly."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "*29 is set to <strong>zero</strong>."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 9",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Test Master User Code"
+                },
+                {
+                    "type": "text",
+                    "content": "Test the Master User Code, provided during account creation, at the panel."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The Master User Code worked at the panel.",
+                    "link": "deleteUserCodes"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The Master User Code did not work at the panel."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "I do not know the Master User Code."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 9",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Change Master User Code"
+                },
+                {
+                    "type": "text",
+                    "content": "Leaving the SEM connected and powered on, change the Master User Code at the panel and re-test."
+                },
+                {
+                    "type": "text",
+                    "content": "The Master User Code can be changed by entering:"
+                },
+                {
+                    "type": "text",
+                    "content": "Installer Code+[8]+[02]+New Code"
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "alias": "deleteUserCodes",
+            "guide": "Step 9",
+            "items": [
+                {
+                    "type": "DeleteUserCodesTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "For the customer to be able to manage user codes on Alarm.com, all existing user codes must be deleted at the panel and re-entered on the website."
+                },
+                {
+                    "type": "text",
+                    "content": "There is a <em>Delete All User Codes</em> option available on MobileTech. This make take up to 10 minutes. Do not touch the SEM, panel, or keypad during this time."
+                },
+                {
+                    "type": "TextButton",
+                    "content": "I deleted all the user codes on the panel.",
+                    "link": "keypads"
+                },
+                {
+                    "type": "TextButton",
+                    "content": "The customer will not manage user codes on Alarm.com."
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Step 9",
+            "items": [
+                {
+                    "type": "DeleteUserCodesTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "If user codes are not deleted at first install of the SEM, the customer will not be able to accurately change user codes on Alarm.com or view what user is arming or disarming the system."
+                },
+                {
+                    "type": "text",
+                    "content": "This should only be skipped on Wireless Signal Forwarding accounts that you don’t plan to upgrade to interactive services later."
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "alias": "keypads",
+            "guide": "Step 8",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Touchscreen Keypads"
+                },
+                {
+                    "type": "text",
+                    "content": "Is there a 6280, Tuxedo Touch, or other touchscreen keypad on the system?"
+                },
+                {
+                    "type": "YesButton"
+                },
+                {
+                    "type": "NoButton",
+                    "link": "zWaveDevices"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Page 16",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "AUI Devices"
+                },
+                {
+                    "type": "text",
+                    "content": "The SEM is compatible with AUI devices, including touchscreen keypads. Arming, disarming, panics and alarms initiated on these keypads will be processed by Alarm.com. However, the following will not be processed unless the keypad is in <em>Console Mode</em>."
+                },
+                {
+                    "type": "list",
+                    "content": [
+                        "User Code Changes",
+                        "Changing the Installer Code via Quick programming mode",
+                        "Bypassing open sensors",
+                        "The specific user that armed or disarmed the system"
+                    ]
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Page 16",
+            "items": [
+                {
+                    "type": "TuxedoTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "Is there a Tuxedo Touch keypad on the system?"
+                },
+                {
+                    "type": "YesButton"
+                },
+                {
+                    "type": "NoButton",
+                    "link": "zWaveDevices"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "guide": "Page 16",
+            "items": [
+                {
+                    "type": "TuxedoTitle"
+                },
+                {
+                    "type": "text",
+                    "content": "The SEM currently supports Z-Wave automation via Alarm.com only. This means that a customer using a Tuxedo Touch to control their Z-Wave devices will need to choose whether to continue using the Tuxedo for automation or switch to Alarm.com."
+                },
+                {
+                    "type": "text",
+                    "content": "If the customer chooses to switch to Alarm.com Z-Wave control, all of the Z-Wave devices need to be deleted from the Tuxedo and learned into the SEM."
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "alias": "zWaveDevices",
+            "guide": "Step 10",
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Z-Wave Devices"
+                },
+                {
+                    "type": "text",
+                    "content": "You should now be ready to add and/or delete Z-Wave devices."
+                },
+                {
+                    "type": "text",
+                    "content": "Z-Wave enrollment is easy and should be the same as other Alarm.com installs."
+                },
+                {
+                    "type": "text",
+                    "content": "Please reference the SEM-Honeywell/ADEMCO Vista Z-Wave Manual, available on the Dealer Site Support Resources page, if you have any questions."
+                },
+                {
+                    "type": "NextButton"
+                },
+                {
+                    "type": "footer"
+                }
+            ]
+        },
+
+        {
+            "items": [
+                {
+                    "type": "Header2",
+                    "content": "Congratulations!"
+                },
+                {
+                    "type": "text",
+                    "content": "You have now installed the System Enhancement Module."
+                },
+                {
+                    "type": "text",
+                    "content": "If you have any questions about the SEM installation or are experiencing any difficulties, please contact Alarm.com Technical Support at the number below."
+                },
+                {
+                    "type": "TechSupport"
+                },
+                {
+                    "type": "footer",
+                    "showResetLink": true
+                }
+            ]
+       }
+    ]
+}

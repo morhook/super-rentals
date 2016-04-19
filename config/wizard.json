@@ -1,3 +1,38 @@
 {
-    
+    "steps": [
+        {
+          "alias": "step1",
+          "items": [
+            {
+              "type": "image",
+              "src": "adc-logo.svg",
+              "alt": "alarm.com"
+            },
+            { 
+              "type": "text",
+              "fill": true,
+              "text": "Sample text 1"
+            }
+          ]
+        },
+        {
+          "alias": "step2",
+          "items": [
+            { 
+              "type": "text",
+              "fill": false,
+              "text": "Sample text 2"
+            },
+            {
+              "type": "container",
+              "items": [
+                {
+                  "type": "text",
+                  "text": "Sample text in container"
+                }
+              ]
+            }
+          ]
+        }
+    ]
 }
