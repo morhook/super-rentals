@@ -12,6 +12,10 @@
               "type": "text",
               "fill": true,
               "text": "Sample text 1"
+            },
+            { 
+              "type": "link",
+              "text": "next"
             }
           ]
         },
