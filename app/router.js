@@ -9,6 +9,7 @@ Router.map(function() {
     this.route('about');
     this.route('contact');
     this.route('adcwizard');
+    this.route('wizard-test');
 });
 
 export default Router;
